@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31646df1-bc7d-4508-ab46-96cbb59c1e98">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pjenis" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tbbrng.`kdbrng` AS tbbrng_kdbrng,
+     tbbrng.`nmbrng` AS tbbrng_nmbrng,
+     tbbrng.`jenis` AS tbbrng_jenis,
+     tbbrng.`hjual` AS tbbrng_hjual,
+     tbbrng.`stock` AS tbbrng_stock,
+     tbbeli.`hbeli` AS tbbeli_hbeli
+FROM
+     `tbbeli` tbbeli INNER JOIN `tbbrng` tbbrng ON tbbrng.`kdbrng` = tbbrng.`kdbrng`]]>
+	</queryString>
+	<field name="tbbrng_kdbrng" class="java.lang.String"/>
+	<field name="tbbrng_nmbrng" class="java.lang.String"/>
+	<field name="tbbrng_jenis" class="java.lang.String"/>
+	<field name="tbbrng_hjual" class="java.lang.Integer"/>
+	<field name="tbbrng_stock" class="java.lang.Integer"/>
+	<field name="tbbeli_hbeli" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="29" width="666" height="80" uuid="c14609f9-8ae9-4880-bb74-7733f5be2848"/>
+				<textElement>
+					<font size="54" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKO BANGUNAN UMAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="13" width="213" height="20" uuid="dd99aa5f-9459-40f1-bb4a-b1e5246f650a"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Barang]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="21" width="100" height="20" uuid="0d1a7dd0-e119-4f3f-83b9-f7c2ab302f4f"/>
+				<box>
+					<pen lineStyle="Dashed"/>
+					<topPen lineStyle="Dashed"/>
+					<leftPen lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.25" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="147" y="21" width="121" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="17e94e9d-8a50-4237-84d6-3c2a911e6e26"/>
+				<box>
+					<bottomPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NAMA BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="21" width="100" height="20" uuid="4b856e22-308f-4a87-bbe9-914bce629910"/>
+				<box>
+					<bottomPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="21" width="100" height="20" uuid="70166d4f-8617-4a08-8a06-e8bbe8025ab6"/>
+				<box>
+					<bottomPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA BELI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="21" width="100" height="20" uuid="ba1b9e44-f219-4c75-b40f-bb2ab5b82f95"/>
+				<box>
+					<bottomPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA JUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="685" y="21" width="100" height="20" uuid="19736fbb-c056-4343-bd36-5eb87f8a8cc7"/>
+				<box>
+					<bottomPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOCK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="17" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="15bb2876-4c04-40ad-8d7e-df7006a6fec6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbrng_kdbrng}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="147" y="0" width="121" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="405f2589-34b1-4130-b7e0-180fbece502d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbrng_nmbrng}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="298" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="7d5ff1e1-1be9-4322-9747-3fb2bf5e3947"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbrng_jenis}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="428" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c7c30015-a189-46b6-ae96-0a610b817336"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbeli_hbeli}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="552" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="0437c478-e825-4666-b5b6-7fb501a94a3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbrng_hjual}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="685" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="4e6fbf56-80f6-4c3a-8616-b2e0c69a8eb1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbbrng_stock}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="348" y="19" width="129" height="20" forecolor="#0000FF" uuid="919173a9-ae44-4ddd-b243-511679fafa62"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Melayani Sepenuh Hati]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58029080-3792-4694-9837-9c7d789566c5">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tbjurnal]]>
+	</queryString>
+	<field name="nojur" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kdakun" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nmakun" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="debet" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kredit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tdebet" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tkredit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="debet_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{debet}]]></variableExpression>
+	</variable>
+	<variable name="tkredit_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{tkredit}]]></variableExpression>
+	</variable>
+	<variable name="debet_2" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{debet}]]></variableExpression>
+	</variable>
+	<variable name="kredit_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{kredit}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="12" width="284" height="47" uuid="f3edc476-f527-4f77-8bf7-68f2d6e73b39"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JURNAL UMUM]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="41" width="100" height="20" uuid="e378524c-6cf6-41de-91bf-49a5781aece2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE AKUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="113" y="41" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="a06b9a02-812e-4cb4-9026-c1e0d1d05eb7"/>
+				<textElement verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NAMA AKUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="493" y="41" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="58880ea8-cff6-4074-ab76-f58805fe379b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[DEBET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="665" y="41" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="9100f41b-e9ad-4f9f-aac1-84ddae054620"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[KREDIT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="13" y="20" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="37b4fecf-4a78-48c1-a5ee-37d2e95de713"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kdakun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="113" y="20" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="d189d1ce-c835-434a-8207-1813a47e7663"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nmakun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="278" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="01b4bccc-436f-4c78-aed5-e6e8ca88d5d3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="493" y="20" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="1ce8f138-fabe-4d5a-8af5-fbd100b0fdf1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="665" y="20" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="405376dd-efcc-484e-9631-f3f450cc33b6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kredit}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="178" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="7c093a21-101e-4dad-a219-b2f8302adc0a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="13" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="68be0d23-a0b6-4e58-83bf-a081e69ee5c6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nojur}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
