@@ -136,7 +136,7 @@ public class lapBeli extends javax.swing.JFrame {
         try {
             String NamaFile = "src/Report/pembelian.jasper";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","TRPL2k19");
+            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","");
             HashMap param = new HashMap(2);
             //Mengambil parameter
             param.put("tgl1",date1.getDate());
@@ -154,7 +154,7 @@ public class lapBeli extends javax.swing.JFrame {
         try {
             String NamaFile = "src/Report/pembelian_1.jasper";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","TRPL2k19");
+            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","");
             HashMap param = new HashMap();
             JasperPrint JPrint = JasperFillManager.fillReport(NamaFile, param, koneksi);
             JasperViewer.viewReport(JPrint, false);

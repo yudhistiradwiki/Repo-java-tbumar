@@ -246,7 +246,7 @@ public class Login extends javax.swing.JFrame {
 public Connection setKoneksi(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn=DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","TRPL2k19");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","");
             st=conn.createStatement();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Koneksi Gagal :" +e);

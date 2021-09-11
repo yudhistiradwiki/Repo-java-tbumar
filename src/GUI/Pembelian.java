@@ -958,7 +958,7 @@ private DefaultTableModel TabModel;
         try {
             String NamaFile = "src/Report/notaBeli.jasper";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","TRPL2k19");
+            Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","");
             HashMap param = new HashMap();
             param.put("ptrans",noTF.getText());
             JasperPrint JPrint = JasperFillManager.fillReport(NamaFile, param, koneksi);
@@ -971,7 +971,7 @@ private DefaultTableModel TabModel;
     public Connection setKoneksi(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn=DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","TRPL2k19");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost/db_tb_umar","root","");
             st=conn.createStatement();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Koneksi Gagal :" +e);
